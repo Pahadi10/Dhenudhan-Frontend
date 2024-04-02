@@ -1,0 +1,50 @@
+{
+  "forms": {
+    "minLength_one": "Please type in at least {{ count }} character",
+    "minLength_other": "Please type in at least {{ count }} characters",
+    "minLengthHelper_one": "Minimum of {{ count }} character",
+    "minLengthHelper_other": "Minimum of {{ count }} characters",
+    "maxLengthHelper_one": "Maximum of {{ count }} character",
+    "maxLengthHelper_other": "Maximum of {{ count }} characters",
+    "maxLength_one": "Please type in a maximum of {{ count }} character",
+    "maxLength_other": "Please type in a maximum of {{ count }} characters",
+    "required": "This field is required",
+    "pattern": "Invalid characters",
+    "nonIntegerValue": "{{text}} cannot have decimals",
+    "helper": {
+      "uppercase": "Upper case character",
+      "specialCharacters": "Special character"
+    },
+    "invalidPhone": "Invalid phone number",
+    "maxSize": "Maximum size exceeded",
+    "invalidFile": "Invalid file format uploaded",
+    "endTimeEqualStartTime": "End time and start time cannot be the same",
+    "endTimeBeforeStartTime": "End time cannot be earlier than start time.",
+    "length": "Requires {{count }} characters",
+    "patternAlt": "Pattern does not match",
+    "invalidCharacter": "Invalid character",
+    "confirmPassword": "Passwords don't match",
+    "invalidIp": "Invalid IP format",
+    "invalidEmail": "Please type in a valid e-mail",
+    "invalidChargeRate": "Please type in a valid charge rate",
+    "specialCharacters_one": "Only {{ charList }} is allowed as special character.",
+    "specialCharacters_other": "Only {{ charList }} are allowed as special characters.",
+    "noSpecialCharacters": "Only alphanumeric characters are allowed.",
+    "noWhitespace": "Please remove the whitespace from the beginning or the end.",
+    "noWhitespaceAtAll": "Please remove the whitespace.",
+    "minLengthCount": "{{ field }} must be atleast {{ count }}",
+    "maxLengthCount": "{{ field }} cannot exceed {{ count }}",
+    "invalidColor": "Please type in a valid hexadecimal color code.",
+    "requiredNumber": "{{ field }} must be a number"
+  },
+  "api": {
+    "min": "{{ field }} should have a minimum of {{ min }} characters",
+    "max": "{{ field }} should have a maximum of {{ max }} characters",
+    "excludes": "{{ field }} should not contain {{ excludes }}",
+    "required": "{{ field }} field is required",
+    "pattern": "{{ field }} has invalid characters",
+    "empty": "{{ field }} should not be empty",
+    "generic": "Something went wrong, please try again later.",
+    "permissionDenied": "shop user permission missing to perform this action. Please reload your browser or re-login"
+  }
+}

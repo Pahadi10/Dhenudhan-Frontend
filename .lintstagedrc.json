@@ -1,0 +1,3 @@
+{
+  "*.(js|jsx)": ["yarn lint:pre-commit", "yarn prettier:pre-commit"]
+}

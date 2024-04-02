@@ -1,0 +1,15 @@
+{
+  "name": "ui-library",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "^14.17.0",
+    "yarn": "~1.22.0",
+    "npm": "This project only runs Yarn due to Workspaces: https://classic.yarnpkg.com/lang/en/docs/workspaces/"
+  },
+  "scripts": {
+    "build:dev": "yarn build-storybook",
+    "build:production": "NODE_ENV=production yarn build-storybook"
+  },
+  "dependencies": {}
+}

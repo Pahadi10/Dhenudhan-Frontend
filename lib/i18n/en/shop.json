@@ -1,0 +1,37 @@
+{
+  "login": {
+    "logoAltText": "Dhenudhan logo",
+    "title": "Dhenudhan shop Login",
+    "subtitle": "Enter your credentials to access your account.",
+    "email": "Email",
+    "password": "Password",
+    "buttonLabel": "Log in",
+    "forgotPass": "Forgot password?",
+    "registerNewUser": "Don't have any account? Register"
+
+  },
+
+  "navigation": {
+    "logoTitle": "Dhenu Dhan",
+    "links": {
+      "home": "Home",
+      "brands": "Brands",
+      "reports": "Reports",
+      "apiDash": "API Dash"
+    },
+ 
+    "avatarAlt": "User avatar"
+  },
+
+  "signup": {
+    "logoAltText": "Dhenudhan logo",
+    "title": "Dhenudhan shop Signup",
+    "subtitle": "Enter your credentials to create your account.",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "buttonLabel": "Sign Up"
+  }
+  
+}

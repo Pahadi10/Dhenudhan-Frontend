@@ -1,0 +1,46 @@
+version: 0.2
+
+env:
+  variables:
+    CLOUDFRONT_DISTRIBUTION_ID: EPDIOTCXP85IL
+    PACKAGE_NAME: shop
+    ENVIRONMENT: dev
+    API_URL: https://gateway-dev.gohaptik.com/
+    SENTRY_URL: https://e50c9909a278448f90c812840c5346cf@o1092364.ingest.sentry.io/6547793
+    AUTH_MECHANISM: shop
+    AMPLIFY_REGION: us-east-1
+    AMPLIFY_USER_POOL_ID: us-east-1_CZQDhAvdn
+    AMPLIFY_USER_POOL_WEB_CLIENT_ID: 271rccf48l02mg0d1f47m27h75
+    AMPLIFY_IDENTITY_POOL_ID: XX-XXXX-X:XXXXXXXX-XXXX-1234-abcd-1234567890ab
+    AMPLIFY_AUTHENTICATION_FLOW_TYPE: USER_PASSWORD_AUTH
+    AMPLIFY_OAUTH_DOMAIN: dev-shop-user.auth.us-east-1.amazoncognito.com
+    AMPLIFY_OAUTH_SCOPE: email,openid,aws.cognito.signin.user.shop
+    AMPLIFY_OAUTH_REDIRECT_SIGN_IN: http://localhost:3000/
+    AMPLIFY_OAUTH_REDIRECT_SIGN_OUT: http://localhost:3000/
+    AMPLIFY_OAUTH_RESPONSE_TYPE: code
+phases:
+  install:
+    on-failure: ABORT
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - npm install -g yarn
+      - cd packages/$PACKAGE_NAME/
+      - yarn
+  build:
+    on-failure: ABORT
+    commands:
+      - yarn build:$ENVIRONMENT
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: packages/$PACKAGE_NAME/dist
+
+
+cache:
+  paths:
+    - node_modules/**/*

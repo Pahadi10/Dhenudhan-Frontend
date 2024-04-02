@@ -1,0 +1,28 @@
+version: 0.2
+
+env:
+  variables:
+    CLOUDFRONT_DISTRIBUTION_ID: E1VASGQVFZU5RP
+    PACKAGE_NAME: ui-library
+    ENVIRONMENT: dev
+
+phases:
+  install:
+    on-failure: ABORT
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - npm install -g yarn
+      - cd lib
+      - yarn
+  build:
+    on-failure: ABORT
+    commands:
+      - yarn build:$ENVIRONMENT
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/$PACKAGE_NAME/*"
+
+cache:
+  paths:
+    - node_modules/**/*

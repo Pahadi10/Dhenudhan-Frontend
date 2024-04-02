@@ -1,0 +1,4 @@
+{
+  "include": ["packages/**/*", "lib/**/*", "cli"],
+  "exclude": ["node_modules/**/*", "lib/node_modules/**/*"]
+}

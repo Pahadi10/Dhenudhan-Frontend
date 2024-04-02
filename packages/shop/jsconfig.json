@@ -1,0 +1,24 @@
+{
+  "extends": "../jsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@lib/*": ["../../lib/*"],
+      "@site-settings/*": ["../site-settings/*"],
+      "_jest/*": ["../../jest/*"],
+      "_components/*": ["./src/components/*"],
+      "_services/*": ["./src/services/*"],
+      "_styles/*": ["./src/styles/*"],
+      "_constants/*": ["./src/constants/*"],
+      "_pages/*": ["./src/pages/*"],
+      "_mocks/*": ["./src/mocks/*"],
+      "_config/*": ["./src/config/*"],
+      "_hooks/*": ["./src/hooks/*"],
+      "_utils/*": ["./src/utils/*"],
+      "_assets/*": ["./src/assets/*"],
+      "_contexts/*": ["./src/contexts/*"],
+      "_providers/*": ["./src/providers/*"],
+      "~src/*": ["./src/*"]
+    }
+  }
+}

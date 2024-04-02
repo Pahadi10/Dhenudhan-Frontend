@@ -1,0 +1,7 @@
+{
+  "i18n-ally.localesPaths": ["lib/i18n"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
+  "i18n-ally.enabledFrameworks": ["i18next", "react"],
+  "i18n-ally.namespace": true
+}

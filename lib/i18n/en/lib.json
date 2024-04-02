@@ -1,0 +1,31 @@
+{
+  "logoTitle": "Dhenu Dhan",
+  "profilePicture": {
+    "photoChanged": "Photo changed!",
+    "successfullyChangedPhoto": "You've successfully changed the photo",
+    "changePhoto": "Change photo",
+    "savePhoto": "Save photo",
+    "saveChanges": "Save changes",
+    "cropAndSave": "Crop and save",
+    "startOver": "Start over",
+    "uploadPhoto": "Upload photo",
+    "takePictureOrUpload": "You can take a picture or upload one",
+    "photoTypesAllowed": "Files allowed <0>{{val, list}}</0>",
+    "maxSize": "Max size <0>{{size}}mb</0>",
+    "cameraFraming": "Camera framing",
+    "useCamera": "Use camera",
+    "cameraNotFound": "Camera not found",
+    "cantConnectCamera": "Can't connect to the device camera",
+    "allowCamera": "Allow camera",
+    "giveCameraAccess": "Please give permission to access your camera",
+    "cameraStarting": "Camera starting",
+    "pleaseWaitCamera": "Please wait while the camera starts",
+    "cameraIsBlocked": "Camera is blocked",
+    "unlockCamera": "To take a photo we must have access to the camera. \n Click on the camera blocked icon in your browser's address bar",
+    "changeImage": "Change image",
+    "dismiss": "Dismiss",
+    "retry": "Retry",
+    "startCapture": "Start capture",
+    "successfullyChangedPhotoDelayed": "You've successfully updated the logo. The image might take a while to load."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": "^14.17.0",
+    "yarn": "~1.22.0",
+    "npm": "This project only runs Yarn due to Workspaces: https://classic.yarnpkg.com/lang/en/docs/workspaces/"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.js",
+    "dev:debug": "webpack-dev-server --config webpack.config.js --env shouldDetectCircularDepedency=true",
+    "build:dev": "webpack --config webpack.config.js",
+    "build:production": "ENVIRONMENT=production webpack --config webpack.config.js",
+    "build:staging": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:qa": "NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
+    "react-router-dom": "^6.6.0"
+  }
+}

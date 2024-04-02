@@ -1,0 +1,27 @@
+{
+  "creditCards": {
+    "manageCards": "Manage cards",
+    "addCard": "Add card",
+    "editCard": "Edit card",
+    "enableForFuturePayments": "Enable for future payments",
+    "enableForUpfrontPayments": "Enable for upfront payments",
+    "upfrontPaymentsOnly": "Upfront payments only",
+    "futurePaymentsOnly": "Future payments only",
+    "expirationDate": "Expiration date",
+    "cvc": "CVC",
+    "usage": "Usage",
+    "addNewCard": "Add new card",
+    "expirationDateFieldLabel": "MM / YY",
+    "creditCard": "Credit card",
+    "debitCard": "Debit card",
+    "cardHolderName": "Card holder name",
+    "cardNumber": "Card number"
+  },
+  "textEditor": {
+    "shortCode": "Use a short code"
+  },
+  "modes": {
+    "edit": "Edit",
+    "add": "Add"
+  }
+}
