@@ -50,8 +50,9 @@ export const Layout = () => {
     pathname={location.pathname}
     />
 
+  <Box style={{}}> 
   <Category setRoute={navigate}/>
-
+  </Box>
 
       <Outlet />
       {/* {hasValidSession && <Footer />} */}

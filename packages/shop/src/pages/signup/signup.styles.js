@@ -38,4 +38,11 @@ export const styles = {
     width: '100%',
     bottom: 0,
   },
+
+  loaderContainer:{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh'
+  },
 }

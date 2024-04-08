@@ -39,6 +39,13 @@ export const styles = {
     bottom: 0,
   },
 
+  loaderContainer:{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh'
+  },
+
   textButton:{
     color: 'primary.main',
     cursor: 'pointer',

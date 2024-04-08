@@ -1,4 +1,5 @@
 import '@lib/utils/type-defs.util'
+import { palette } from '@lib/styles/material-ui/palette'
 
 /** @type {Styles} */
 
@@ -23,6 +24,10 @@ export const styles = {
     priceContainer:{
         display: 'flex'
     },
+
+    cartIcon:{
+        fill: palette.primary.main
+    }
 
 
 }

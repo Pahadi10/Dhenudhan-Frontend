@@ -3,7 +3,7 @@ import catData from '~src/jsons/banner.json'
 import CustomCard from '@lib/components/shared/card-category-select/card.component'
 import { Box } from '@mui/material'
 import { IMG_HEIGHT, IMG_WIDTH, CARD_HEIGHT, CARD_WIDTH, CARD_TOP_MARGIN } from './category-select.constants'
-import {styles} from './category-select.component.styles'
+import {styles} from './category-select.styles'
 
 
 const Category = ({ setRoute }) => { 
@@ -24,9 +24,9 @@ const Category = ({ setRoute }) => {
           url={item.route}
           imgHeight={IMG_HEIGHT}
           imgWidth={IMG_WIDTH}
-          cardHeight={CARD_HEIGHT}
-          cardWidth={CARD_WIDTH}
-          cardMarginTop= {CARD_TOP_MARGIN}
+          // cardHeight={CARD_HEIGHT}
+          // cardWidth={CARD_WIDTH}
+          // cardMarginTop= {CARD_TOP_MARGIN}
           cardShadow={"none"}
           setRoute={setRoute}
         />

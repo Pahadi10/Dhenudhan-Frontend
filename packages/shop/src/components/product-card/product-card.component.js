@@ -22,6 +22,15 @@ const ProductCard = (props) => {
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
 
+  // const handleAddToCart = () => {
+    
+  //   addToCart({
+  //     name,
+  //     price,
+  //     quantity: 1
+  //   });
+  // };
+
   return (
     <>
       <Card>
@@ -44,13 +53,13 @@ const ProductCard = (props) => {
         <CardActions style={styles.cardAction}>
           {salePrice ? (
             <Typography style={styles.priceContainer}>
-              <strike>${price}</strike>&nbsp; &nbsp; ${salePrice}
+              <strike>₹{(price*83.30).toFixed(0)}</strike>&nbsp; &nbsp; ₹{(salePrice*83.30).toFixed(0)}
             </Typography>
           ) : (
-            <Typography>${price}</Typography>
+            <Typography>₹{(price*83.30).toFixed(0)}</Typography>
           )}
           <Button size="small" color="primary">
-            <CartIcon style={{ fill: 'green' }} />
+            <CartIcon style={styles.cartIcon} />
             Cart
           </Button>
         </CardActions>
@@ -61,6 +70,7 @@ const ProductCard = (props) => {
           openModal={openModal}
           handleCloseModal={handleCloseModal}
           productName={name}
+          productThumbnail={productThumbnail}
           weightOrPiece={weight}
           productPrice={price}
           productSalePrice={salePrice}

@@ -12,9 +12,11 @@ import { subcategoryUrl, NO_RESULT_IMAGE } from './page-content.constants';
 const PageContent = (props) => {
     const { pageId, category } = props;
 
-    const bannerData = pageHeader?.data.find(item => item.id === pageId);
-    const { title, description: desc, image: { original: bannerImage }, promotional_sliders: promotionalBanners } = bannerData?.banners[0];
-    console.log(promotionalBanners)
+    const filteredBannerData = pageHeader?.data.find(item => item.id === pageId);
+    const title = filteredBannerData?.banners[0].title;
+    const bannerImage = filteredBannerData?.banners[0].image.original
+    const desc = filteredBannerData?.banners[0].description
+    const promotionalBanners = filteredBannerData?.promotional_sliders
     const [mainCategoryData, setMainCategoryData] = useState([]);
     const [hasMoreData, setHasMoreData] = useState(true);
     const [selectedSubcategory, setSelectedSubcategory] = useState(null);
@@ -51,7 +53,6 @@ const PageContent = (props) => {
         fetchAllParentProducts();
     }, [category]);
 
-    console.log({ mainCategoryData })
 
     useEffect(() => {
         if (selectedSubcategory !== null) {
@@ -66,6 +67,7 @@ const PageContent = (props) => {
     const handleLoadMore = () => {
         // setParentPageNumber(prevPageNumber => prevPageNumber + 1);
     };
+
 
     return (
         <Box style={styles.root}>
@@ -107,6 +109,7 @@ const PageContent = (props) => {
                                 filteredSubcategoryData.map(product => (
                                     <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
                                         <ProductCard
+                                            id = {product.id}
                                             productThumbnail={product.image.original}
                                             name={product.name}
                                             weight={product.unit}

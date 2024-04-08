@@ -1,5 +1,4 @@
 import '@lib/utils/type-defs.util'
-import { Hidden } from '@mui/material'
 
 /** @type {Styles} */
 
@@ -18,12 +17,12 @@ export const styles = {
 
     bannerImage:{
         width: '100%',
-        marginTop: '-10%',
+        // marginTop: '-10%',
     },
 
     bannrTextBox:{
         position: 'absolute',
-        top: '55%',
+        top: '35%',
         textAlign: 'center',
         width: '90vw'
     },

@@ -11,9 +11,11 @@ import HeartIconFilled from '@lib/assets/svgs/heart-filled.svg';
 import StarIcon from '@lib/assets/svgs/star.svg';
 
 const ProductModal = ({
+
   openModal,
   handleCloseModal,
   productName,
+  productThumbnail,
   weightOrPiece,
   productPrice,
   productSalePrice,
@@ -22,7 +24,6 @@ const ProductModal = ({
   productInStock,
   productGallery,
   productRatings,
-  productThumbnail
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [liked, setLiked] = useState(false);
@@ -50,7 +51,7 @@ const ProductModal = ({
       >
         <Box sx={{ ...styles.root, overflow: 'auto' }}>
           <Grid container>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Grid item xs={12} sm={12} md={6} lg={6} >
               {productGallery ? (
                 <ProductImageSlider
                   images={productGallery}
@@ -58,7 +59,7 @@ const ProductModal = ({
                   setCurrentImageIndex={setCurrentImageIndex}
                 />
               ) : (
-                <img src={productThumbnail} alt="Product Thumbnail" style={styles.productThumbnail} />
+                  <img src={productThumbnail} alt="Product Thumbnail" style={styles.thumbnailImage} />
               )}
               {productGallery && (
                 <Grid container style={styles.thumbnailImagesContainer}>

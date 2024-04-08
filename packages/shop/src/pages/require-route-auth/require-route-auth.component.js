@@ -9,10 +9,11 @@ const RequireAuth = () => {
 
   // const user = JSON.parse(sessionStorage.getItem(USER))
   // const hasValidSession = user?.token?.accessToken
-  const user = JSON.parse(sessionStorage.getItem("loggedin"))
-  const hasValidSession = user
+  // const user = sessionStorage.getItem("loggedin")
+  const isLoggedIn = sessionStorage.getItem('loggedIn') === "1"
+  // const hasValidSession = user
 
-  // if (!hasValidSession) {
+  // if (!isLoggedIn) {
   //   return <Navigate to={ROUTES.login.path} state={{ from: location }} replace />
   // }
   return <Outlet />

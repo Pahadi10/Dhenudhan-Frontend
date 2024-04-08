@@ -1,4 +1,5 @@
 import '@lib/utils/type-defs.util';
+import { palette } from '@lib/styles/material-ui/palette';
 
 /** @type {Styles} */
 
@@ -49,7 +50,7 @@ export const styles = {
   },
 
   ratingContainer: {
-    background: 'green',
+    background: palette.primary.main,
     padding: '5px 20px',
     color: 'white',
     borderRadius: '5px',
